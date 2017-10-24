@@ -68,3 +68,86 @@ body{
 
 #content,
 ul li a{ box-shadow: 0px 1px 1px #999; }
+
+
+article,
+figure,
+footer,
+header,
+main {
+  display: block;
+}
+/*--- Clearings ---*/
+
+header:before,
+header:after,
+main:before,
+main:after {
+  content: "";
+  display: table;
+}
+
+header:after,
+main:after {
+  clear: both;
+}
+
+main {
+  position: relative;
+  width: 1200px;
+  max-width: 96%;
+  margin: 0 auto;
+  
+  
+  [class*="card-"] a.bt-love {
+  background-position: 0 7px;
+}
+
+[class*="card-"] a.bt-love:hover {
+  color: #f34;
+  background-position: 0 -25px;
+}
+  
+}
+
+
+.ribbon-buy {
+  position: absolute;
+  z-index: 9999;
+  top: -1px;
+  right: 3.2rem;
+  display: block;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  /* text-indent: -4000px; */
+  font-size: 1.6rem;
+  padding-top: 2.6rem;
+  font-weight: 600;
+}
+
+a.button {
+	display: inline-block;
+	text-align: center;
+	padding: 14px 24px;
+	font-weight: 600;
+	cursor: pointer;
+	line-height: 1;
+  background: #88d;
+}
+p,
+li,
+time {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  margin: 0 0 2.4rem;
+}
+ p.subinfo {
+  margin-bottom: .8rem;
+}
+
+
+a.location {
+  background: url('http://jlantunez.com/imgs/spritecard.png') no-repeat -4px bottom;
+  padding-left: 2rem;
+}
