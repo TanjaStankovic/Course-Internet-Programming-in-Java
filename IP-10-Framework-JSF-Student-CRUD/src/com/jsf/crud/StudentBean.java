@@ -17,7 +17,10 @@ public class StudentBean {
 	private String password;  
 	private String gender;  
 	private String address;
-
+	private int god_studija;  
+	private boolean budzet;  
+	private int racun;
+	
 	public ArrayList<StudentBean>studentsListFromDB;
 
 	public int getId() {
@@ -68,6 +71,28 @@ public class StudentBean {
 		this.address = address;
 	}  
 	
+	public int getgod_studija() {
+		return god_studija;
+	}
+
+	public void setgod_studija(int god_studija) {
+		this.god_studija = god_studija;
+	}  
+	public boolean getbudzet() {
+		return budzet;
+	}
+
+	public void setbudzet(boolean budzet) {
+		this.budzet = budzet;
+	}  
+	
+	public int getracun() {
+		return racun;
+	}
+
+	public void setracun(int racun) {
+		this.racun = racun;
+	} 
 	
 	@PostConstruct
 	public void init() {

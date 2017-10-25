@@ -47,6 +47,10 @@ public class DatabaseOperation {
 				stuObj.setPassword(resultSetObj.getString("student_password"));  
 				stuObj.setGender(resultSetObj.getString("student_gender"));  
 				stuObj.setAddress(resultSetObj.getString("student_address"));  
+				stuObj.setgod_studija(resultSetObj.getInt("god_studija"));  
+				stuObj.setracun(resultSetObj.getInt("racun"));  
+				stuObj.setbudzet(resultSetObj.getBoolean("budzet"));  
+				
 				studentsList.add(stuObj);  
 			}   
 			System.out.println("Total Records Fetched: " + studentsList.size());
@@ -68,6 +72,10 @@ public class DatabaseOperation {
 			pstmt.setString(3, newStudentObj.getPassword());
 			pstmt.setString(4, newStudentObj.getGender());
 			pstmt.setString(5, newStudentObj.getAddress());
+			pstmt.setInt(6, newStudentObj.getgod_studija());
+			pstmt.setInt(7, newStudentObj.getracun());
+			pstmt.setBoolean(8, newStudentObj.getbudzet());
+			
 			saveResult = pstmt.executeUpdate();
 			connObj.close();
 		} catch(Exception sqlException) {
@@ -100,7 +108,11 @@ public class DatabaseOperation {
 				editRecord.setEmail(resultSetObj.getString("student_email"));
 				editRecord.setGender(resultSetObj.getString("student_gender"));
 				editRecord.setAddress(resultSetObj.getString("student_address"));
-				editRecord.setPassword(resultSetObj.getString("student_password")); 
+				editRecord.setPassword(resultSetObj.getString("student_password"));
+				editRecord.setgod_studija(resultSetObj.getInt("god_studija"));
+				editRecord.setracun(resultSetObj.getInt("racun"));
+				editRecord.setbudzet(resultSetObj.getBoolean("budzet")); 
+				
 			}
 			sessionMapObj.put("editRecordObj", editRecord);
 			connObj.close();

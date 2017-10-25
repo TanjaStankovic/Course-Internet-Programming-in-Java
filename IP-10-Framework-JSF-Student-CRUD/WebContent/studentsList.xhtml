@@ -25,35 +25,59 @@
                 <f:facet name="header">Id</f:facet>
                 <h:outputText value="#{table.rowIndex + 1}" />
             </h:column>
+            
             <h:column>
                 <f:facet name="header">Ime studenta</f:facet>
                 <h:outputText value="#{student.name}" />
             </h:column>
+            
             <h:column>
                 <f:facet name="header">Email adresa</f:facet>
                 <h:outputText value="#{student.email}" />
             </h:column>
+            
             <h:column>
                 <f:facet name="header">Lozinka</f:facet>
                 <h:outputText value="#{student.password}" />
             </h:column>
+            
             <h:column>
                 <f:facet name="header">Pol</f:facet>
                 <h:outputText value="#{student.gender}" />
             </h:column>
+            
             <h:column>
                 <f:facet name="header">Adresa</f:facet>
                 <h:outputText value="#{student.address}" />
             </h:column>
+            
+            <h:column>
+                <f:facet name="header">Godina studija</f:facet>
+                <h:outputText value="#{student.god_studija}" />
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Budzet</f:facet>
+                <h:outputText value="#{student.budzet}" />
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Racun</f:facet>
+                <h:outputText value="#{student.racun}" />
+            </h:column>
+            
             <h:column>
                 <f:facet name="header">Ažuriranje</f:facet>
                 <h:commandButton action="#{studentBean.editStudentRecord(student.id)}" value="Ažuriraj" class="btn btn-primary" />
             </h:column>
+            
             <h:column>
                 <f:facet name="header">Brisanje</f:facet>
                 <h:commandButton action="#{studentBean.deleteStudentRecord(student.id)}" value="Obriši" class="btn btn-danger" />
             </h:column>
+            
         </h:dataTable>
+        
         <center>
             <h:commandButton action="createStudent.xhtml?faces-redirect=true" value="Kreiranje novog korisnika" class="btn btn-success btnSpace" />
         </center>
