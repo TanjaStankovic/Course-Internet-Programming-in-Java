@@ -1,14 +1,15 @@
-<html xmlns = "http://www.w3c.org/1999/xhtml"
-	  xmlns:f = "http://java.sun.com/jsf/core"
-	  xmlns:h = "http://java.sun.com/jsf/html">
-<h:head>
-</h:head>
+<html 	xmlns="http://www.w3c.org/xhtml"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core">
+		<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		</head>
 <body>
-
-
-			
-
-	<h:form>
+	<ui:composition template="/WEB-INF/template/template.xhtml">
+		<ui:define name="title">Chat</ui:define>
+		<ui:define name="content">
+		<h:form>
 		<h:outputLabel>Username</h:outputLabel><br/>
 		<h:inputText id="username" value="#{messages.currentMessage.userName}" required="true" requiredMessage=" * Obavezno polje" />
 		<h:message for="username" style="color: red;" /><br/><br/>
@@ -32,6 +33,7 @@
 		</h:column>
 	</h:dataTable>
 	
-
-</body>
+	</ui:define>
+	</ui:composition>
+</body> 
 </html>
